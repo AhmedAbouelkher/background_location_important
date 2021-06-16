@@ -99,7 +99,7 @@ class LocationUpdatesService : Service() {
         mNotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = "Application Name"
-            val mChannel = NotificationChannel(CHANNEL_ID, name, NotificationManager.IMPORTANCE_DEFAULT)
+            val mChannel = NotificationChannel(CHANNEL_ID, name, NotificationManager.IMPORTANCE_LOW)
             mChannel.setSound(null, null)
             mNotificationManager!!.createNotificationChannel(mChannel)
         }
